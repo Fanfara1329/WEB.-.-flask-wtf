@@ -4,9 +4,13 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@app.route('/index/<cat>', methods=['POST', 'GET'])
-def index(cat):
-    return render_template('base.html', title=cat)
+@app.route('/training/<prof>', methods=['POST', 'GET'])
+def training(prof):
+    if 'инженер' in prof or 'строитель' in prof:
+        auth = True
+    else:
+        auth = False
+    return render_template('new.html', auth=auth)
 
 
 if __name__ == '__main__':

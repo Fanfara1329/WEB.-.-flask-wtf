@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>{{ title }}</title>
-    </head>
-    <body>
+    <title>{{ title }}</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
         <h1>Миссия Колонизация Марса</h1>
         <h4>И на Марсе будут яблони цвести</h4>
-    </body>
+    </div>
+    <div class="row">
+        {% block head %}
+        {% endblock %}
+    </div>
+</div>
+</body>
 </html>

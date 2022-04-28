@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block head %}
+<dir class="row">
+
+    {% if auth%}
+    <div class="col-12">
+        <h2>Инженерные тренажеры</h2>
+        <img src="../static/img/ship_eng.jpg" />
+    </div>
+    {% else %}
+    <div class="col-5">
+        <h2>Научные симуляторы</h2>
+        <img src="../static/img/ship_scien.jpg" />
+    </div>
+    {% endif %}
+</dir>
+
+{% endblock %}
