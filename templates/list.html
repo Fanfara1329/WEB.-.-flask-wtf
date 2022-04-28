@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block head %}
+<dir class="row">
+
+    {% if list == "ul"%}
+    <h2>Список профессий</h2>
+    <ul>
+        {% for prof in profession %}
+        <li>{{ prof }}</li>
+        {% endfor %}
+    </ul>
+    {% elif list == "ol"%}
+    <h2>Список профессий</h2>
+    <ol>
+        {% for prof in profession %}
+        <li>{{ prof }}</li>
+        {% endfor %}
+    </ol>
+    {% else %}
+    <h1>Ошибка ввода данных</h1>
+    {% endif %}
+</dir>
+
+{% endblock %}

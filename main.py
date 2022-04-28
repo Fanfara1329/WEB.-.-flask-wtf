@@ -4,13 +4,10 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@app.route('/training/<prof>', methods=['POST', 'GET'])
-def training(prof):
-    if 'инженер' in prof or 'строитель' in prof:
-        auth = True
-    else:
-        auth = False
-    return render_template('new.html', auth=auth)
+@app.route('/list_prof/<list>', methods=['POST', 'GET'])
+def training(list):
+    list_prof = ['p', 'o', 'p']
+    return render_template('list.html', list=list, profession=list_prof)
 
 
 if __name__ == '__main__':
